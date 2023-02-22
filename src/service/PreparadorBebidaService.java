@@ -1,16 +1,31 @@
 package service;
 
+import model.ReservatorioAgua;
+
 public class PreparadorBebidaService {
 
+	private final ReservatorioAgua reservatorio = new ReservatorioAgua();
+	
     public void prepararAguaQuente() throws InterruptedException {
+    	
+    	System.out.println("Quantidade atual de água: " + reservatorio.getNivelAgua());
+    	
+    	reservatorio.retiraAgua();
+    	
         System.out.println("Esquentando água...");
         Thread.sleep(3000);
 
         System.out.println("Água fervida!");
         Thread.sleep(1000);
+        
+        System.out.println("Quantidade atual de água: " + reservatorio.getNivelAgua());
+        
     }
 
     public void prepararCafe() throws InterruptedException {
+    	
+    	reservatorio.retiraAgua();
+    	
         System.out.println("Esquentando água...");
         Thread.sleep(3000);
 
@@ -25,6 +40,9 @@ public class PreparadorBebidaService {
     }
 
     public void prepararCafeComLeite() throws InterruptedException {
+    	
+    	reservatorio.retiraAgua();
+    	
         System.out.println("Esquentando água...");
         Thread.sleep(3000);
 
@@ -42,6 +60,9 @@ public class PreparadorBebidaService {
     }
 
     public void prepararCapuccino() throws InterruptedException {
+    	
+    	reservatorio.retiraAgua();
+    	
         System.out.println("Esquentando água...");
         Thread.sleep(3000);
 
@@ -62,6 +83,9 @@ public class PreparadorBebidaService {
     }
 
     public void prepararCha() throws InterruptedException {
+    	
+    	reservatorio.retiraAgua();
+    	
         System.out.println("Esquentando água...");
         Thread.sleep(3000);
 
